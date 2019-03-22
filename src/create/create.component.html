@@ -1,0 +1,19 @@
+<div class="left">
+
+  <form novalidate [formGroup]="form">
+    <div>
+      <label for="name">Name</label>
+      <input id="name" type="text" placeholder="name" formControlName="name">
+    </div>
+
+    <div>
+      <label for="url">URL</label>
+      <input id="url" placeholder="url" formControlName="url" type="text">
+    </div>
+  </form>
+
+  <button [disabled]="form.invalid" (click)="addTutorial(form.value)" class="btn">Save</button>
+
+  <pre>{{form.value | json}}</pre>
+
+</div>

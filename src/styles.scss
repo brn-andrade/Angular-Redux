@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial';
+}
+
+.left {
+    float: left;
+    @extend %commons-padding;
+}
+
+.rigth {
+    float: right;
+    @extend %commons-padding;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+
+//Extends
+%commons-padding {
+    width: calc(50% - 6em);
+    padding: 3rem;
+}
+
+.btn {
+    background-color: black; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 4px;
+  }
+
+  .btn:hover {
+    background-color: rgb(133, 123, 123);
+    color: #ffffff;
+    padding: 8px 16px;
+  }
+
+  button:disabled, button[disabled]{
+  opacity: 0.6;
+  cursor: not-allowed;
+}
