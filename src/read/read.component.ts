@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Tutorial } from 'src/app/models/tutorial.model';
+import { Todo } from 'src/app/models/todo.model';
 import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/app.state';
-import { RemoveTutorial } from 'src/app/actions/tutorial.actions';
+import { RemoveTodo } from 'src/app/actions/todo.actions';
 
 @Component({
   selector: 'app-read',
@@ -12,17 +12,17 @@ import { RemoveTutorial } from 'src/app/actions/tutorial.actions';
 })
 export class ReadComponent implements OnInit {
 
-  tutorials: Observable<Tutorial[]>;
+  todos: Observable<Todo[]>;
 
   constructor(private store: Store<AppState>) {
-    this.tutorials = store.select('tutorial');
+    this.todos = store.select('todo');
   }
 
   ngOnInit() {
   }
 
-  deleteTutorial(index: number) {
-    this.store.dispatch(new RemoveTutorial(index));
+  deleteTodo(index: number) {
+    this.store.dispatch(new RemoveTodo(index));
   }
 
 }

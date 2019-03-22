@@ -1,4 +1,4 @@
-export interface Tutorial {
+export interface Todo {
     name: string;
     url: string;
 }

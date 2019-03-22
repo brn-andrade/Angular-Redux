@@ -1,11 +1,11 @@
-<div class="right" *ngIf="tutorials">
+<div class="right" *ngIf="todos">
 
-  <h3>Tutorials</h3>
+  <h3>Todos</h3>
   
   <ul>
-    <li *ngFor="let tutorial of tutorials | async; let i = index">
-      <a [href]="tutorial.url" _target="_blank" style="margin-right: 3px">{{ tutorial.name}}</a>
-      <button type="button" (click)="deleteTutorial(i)">X</button>
+    <li *ngFor="let todo of todos | async; let i = index">
+      <a [href]="todo.url" _target="_blank" style="margin-right: 3px">{{ todo.name}}</a>
+      <button type="button" (click)="deleteTodo(i)">X</button>
     </li>
   </ul>
 

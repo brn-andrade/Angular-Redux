@@ -1,5 +1,5 @@
-import { Tutorial } from './models/tutorial.model';
+import { Todo } from './models/todo.model';
 
 export interface AppState {
-    readonly tutorial: Tutorial[];
+    readonly todos: Todo[];
 }

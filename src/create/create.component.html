@@ -12,7 +12,7 @@
     </div>
   </form>
 
-  <button [disabled]="form.invalid" (click)="addTutorial(form.value)" class="btn">Save</button>
+  <button [disabled]="form.invalid" (click)="addTodo(form.value)" class="btn">Save</button>
 
   <pre>{{form.value | json}}</pre>
 

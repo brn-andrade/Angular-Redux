@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AppState } from 'src/app/app.state';
 import { Store } from '@ngrx/store';
-import { AddTutorial } from 'src/app/actions/tutorial.actions';
+import { AddTodo } from 'src/app/actions/todo.actions';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Tutorial } from 'src/app/models/tutorial.model';
+import { Todo } from 'src/app/models/todo.model';
 
 @Component({
   selector: 'app-create',
@@ -24,12 +24,12 @@ export class CreateComponent implements OnInit {
   ngOnInit() {
   }
 
-  addTutorial(data: Tutorial) {
+  addTodo(data: Todo) {
 
     this.form.reset();
     console.log('create');
 
-    this.store.dispatch(new AddTutorial({ name: data.name, url: data.url }));
+    this.store.dispatch(new AddTodo({ name: data.name, url: data.url }));
   }
 
 }

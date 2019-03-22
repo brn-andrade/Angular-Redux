@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { StoreModule } from '@ngrx/store';
-import { reducer } from './reducers/tutorial.reducer';
+import { reducer } from './reducers/todo.reducer';
 
 import { AppComponent } from './app.component';
 import { ReadComponent } from 'src/read/read.component';
@@ -18,7 +18,7 @@ import { CreateComponent } from 'src/create/create.component';
   ],
   imports: [
     StoreModule.forRoot({
-      tutorial: reducer
+      todo: reducer
     }),
     BrowserModule,
     AppRoutingModule,
